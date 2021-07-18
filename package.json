@@ -5,10 +5,30 @@
     "packages/*"
   ],
   "scripts": {
+    "bootstrap": "lerna bootstrap --use-workspaces",
+    "publish": "lerna publish",
     "build": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.stories.js,**/*.spec.js",
-    "dev": "start-storybook -p 5555",
-    "coverage": "jest --coverage",
-    "unit": "jest"
+    "storybook:dev": "start-storybook -p 5555",
+    "storybook:deploy": "storybook-to-ghpages",
+    "storybook:build": "build-storybook -c .storybook -o public",
+    "lint:js": "eslint . --ext .js --ignore-pattern lib --ignore-pattern node_modules",
+    "lint:styles": "stylelint './packages/**/*.js'",
+    "lint": "yarn lint:js && yarn lint:styles",
+    "prettier": "prettier --write \"**/*.{js,json,md,yml}\"",
+    "test:coverage": "jest --coverage",
+    "test:unit": "jest",
+    "test": "yarn build && yarn lint && yarn coverage"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,md,yml}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",
@@ -21,13 +41,19 @@
     "babel-core": "^6.26.3",
     "babel-jest": "^27.0.6",
     "babel-loader": "^8.2.2",
+    "eslint": "^7.31.0",
+    "eslint-config-get-off-my-lawn": "^6.0.1",
+    "husky": "^7.0.1",
     "jest": "^27.0.6",
     "jest-haste-map": "^27.0.6",
     "jest-resolve": "^27.0.6",
     "lerna": "^4.0.0",
+    "prettier": "^2.3.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-test-renderer": "^17.0.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
     "webpack": "^5.45.1"
   }
 }
