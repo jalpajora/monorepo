@@ -9,7 +9,8 @@
     "lerna:version": "lerna version",
     "lerna:bootstrap": "lerna bootstrap --use-workspaces",
     "lerna:publish": "lerna publish",
-    "lerna:build": "yarn lint && lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.stories.js,**/*.spec.js",
+    "lerna:build": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.stories.js,**/*.spec.js",
+    "lerna:build-prod": "yarn lint && yarn test && yarn lerna:build",
     "storybook:dev": "start-storybook -p 5555",
     "storybook:deploy": "storybook-to-ghpages",
     "storybook:build": "build-storybook -c .storybook -o public",
@@ -19,7 +20,7 @@
     "prettier": "prettier --write \"**/*.{js,json,md,yml}\"",
     "test:coverage": "jest --coverage",
     "test:unit": "jest",
-    "test": "yarn build && yarn lint && yarn coverage"
+    "test": "yarn test:unit && yarn test:coverage"
   },
   "husky": {
     "hooks": {
