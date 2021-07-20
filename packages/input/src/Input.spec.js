@@ -6,6 +6,7 @@ import Input from './Input';
 describe('Input', () => {
   test('renders correctly', () => {
     const tree = renderer.create(<Input placeholder="user@gmail.com" />).toJSON();
+
     expect(tree).toMatchSnapshot();
   });
 });
