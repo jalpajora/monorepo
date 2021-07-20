@@ -8,7 +8,6 @@
     "lerna:changed": "lerna changed",
     "lerna:version": "lerna version",
     "lerna:bootstrap": "lerna bootstrap --use-workspaces",
-    "lerna:publish": "lerna publish",
     "lerna:build": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.stories.js,**/*.spec.js",
     "lerna:build-prod": "yarn lint && yarn test && yarn lerna:build",
     "storybook:dev": "start-storybook -p 5555",
