@@ -1,6 +1,6 @@
 {
   "name": "@jalpajora/entertainment",
-  "version": "1.1.8",
+  "version": "1.1.7",
   "main": "lib/index.js",
   "module": "src/index.js",
   "dependencies": {
@@ -10,6 +10,14 @@
   "peerDependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jalpajora/monorepo.git"
   },
   "gitHead": "a90a00d7941e399594677aeceaa915cf056f0704"
 }
