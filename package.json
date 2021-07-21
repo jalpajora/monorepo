@@ -1,6 +1,5 @@
 {
   "name": "root",
-  "private": true,
   "workspaces": [
     "packages/*"
   ],
@@ -21,6 +20,11 @@
     "test:unit": "jest",
     "test": "yarn test:unit && yarn test:coverage",
     "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn prettier && yarn test"
+    }
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",
