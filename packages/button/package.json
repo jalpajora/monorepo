@@ -17,7 +17,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jalpajora/monorepo.git"
+    "url": "https://github.com/jalpajora/monorepo.git",
+    "directory": "packages/button"
   },
-  "gitHead": "8add9697db287228775a323a3d7df9f242462257"
+  "gitHead": "c923fcb37dcd9d0dde8774ef7cdf7db3b6d160de"
 }
