@@ -1,5 +1,5 @@
 {
-  "name": "input",
+  "name": "@jalpajora/input",
   "version": "1.0.2",
   "main": "lib/index.js",
   "module": "src/index.js",
