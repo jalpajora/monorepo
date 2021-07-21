@@ -6,9 +6,9 @@ module.exports = {
   coverageThreshold: {
     global: {
       branches: 100,
-      functions: 100,
+      functions: 60, // Temporary, once repo is ready move this to 80-100
       lines: 100,
-      statements: 100,
+      statements: 80, // Temporary, once repo is ready move this to 80-100
     },
   },
   testPathIgnorePatterns: ['<rootDir>/packages/(?:.+?)/lib/'],

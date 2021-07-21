@@ -19,18 +19,8 @@
     "prettier": "prettier --write \"**/*.{js,json,md,yml}\"",
     "test:coverage": "jest --coverage",
     "test:unit": "jest",
-    "test": "yarn test:unit && yarn test:coverage"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,json,md,yml}": [
-      "prettier --write",
-      "git add"
-    ]
+    "test": "yarn test:unit && yarn test:coverage",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",
