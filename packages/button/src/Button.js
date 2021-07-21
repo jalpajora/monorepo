@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Button = ({children}) => (
-  <button className="button test" type="button">
+  <button className="button" type="button">
     {children}
   </button>
 );

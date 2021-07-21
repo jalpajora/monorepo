@@ -1,5 +1,5 @@
 {
-  "name": "@jalpajora/button",
+  "name": "button",
   "version": "1.2.10",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -20,5 +20,5 @@
     "url": "https://github.com/jalpajora/monorepo.git",
     "directory": "packages/button"
   },
-  "gitHead": "c923fcb37dcd9d0dde8774ef7cdf7db3b6d160de"
+  "gitHead": "bfdd82f1c0d0dcc914c506042ebb2e20a6f3c12b"
 }
