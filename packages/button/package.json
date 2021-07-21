@@ -11,5 +11,13 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   },
-  "gitHead": "5a6f2f51a56d79b69d0f4bc607ba9a9a19e299f4"
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jalpajora/monorepo.git"
+  },
+  "gitHead": "a90a00d7941e399594677aeceaa915cf056f0704"
 }
