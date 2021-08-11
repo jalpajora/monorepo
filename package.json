@@ -3,6 +3,7 @@
   "workspaces": [
     "packages/*"
   ],
+  "private": true,
   "scripts": {
     "lerna:changed": "lerna changed",
     "lerna:version": "lerna version",
@@ -10,6 +11,8 @@
     "lerna:publish": "yarn lerna publish --registry=https://npm.pkg.github.com/",
     "lerna:build": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.stories.js,**/*.spec.js",
     "lerna:build-prod": "yarn lint && yarn test && yarn lerna:build",
+    "dist:es6": "lerna exec --parallel -- cross-env BABEL_ENV=es6 babel --root-mode upward src -d lib --ignore **/*.stories.js,**/*.spec.js --out-dir ./dist-es6",
+    "dist:modules": "lerna exec --parallel -- cross-env BABEL_ENV=modules babel --root-mode upward src -d lib --ignore **/*.stories.js,**/*.spec.js --out-dir ./dist-modules",
     "storybook:dev": "start-storybook -p 5555",
     "storybook:deploy": "storybook-to-ghpages",
     "storybook:build": "build-storybook -c .storybook -o public",
@@ -33,6 +36,7 @@
     "babel-core": "^6.26.3",
     "babel-jest": "^27.0.6",
     "babel-loader": "^8.2.2",
+    "cross-env": "^7.0.3",
     "eslint": "^7.31.0",
     "eslint-config-get-off-my-lawn": "^6.0.1",
     "husky": "^7.0.1",
